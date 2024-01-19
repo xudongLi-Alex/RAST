@@ -23,3 +23,12 @@ Arbitrary style transfer aims to reproduce the target image with the artistic or
 ```
 python Eval.py --content_dir ./content --style_dir ./style
 ```
+## Model Training
+- Create model,coco_train, wiki_train folder.
+- Download [VGG pretrained](https://drive.google.com/file/d/1cI6ubAziMdOsSJZEvfofW-iCtnCmsONL/view?usp=share_link) model to *./model/* folder.
+- Download COCO2014 dataset to *./coco_train/* folder
+- Download Wiki dataset to *./wiki_train/* folder
+- Run the following command:
+```
+python train.py --content_dir ./coco_train/ --style_dir ./wiki_train/
+```
